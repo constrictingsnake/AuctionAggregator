@@ -27,3 +27,5 @@ router.post('/authenticate', async(req, res, next) => {
     }
 
 });
+
+export default router;
