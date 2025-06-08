@@ -30,7 +30,9 @@ model TrackedItem {
   itemId String
   title String
   currentPrice Float
+  currencyVal String
   lastChecked DateTime @default(now())
+  endTime DateTime?
   status String
   metadata Json?
 }
