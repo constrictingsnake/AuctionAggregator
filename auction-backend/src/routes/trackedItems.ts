@@ -34,6 +34,9 @@ router.post('/trackitem', middleware , async (req, res) => {
             );
 
             const itemData = response.data;
+            const endTime = itemData.itemEndDate ? new Date(itemData.itemEndDate) : undefined;
+
+            const status = endTime && endTime.getTime() < Date.now() ? 'ENDED' : 'ACTIVE';
             const newTrackedItem = await prisma.trackedItem.create({
 
                 data: {
@@ -42,17 +45,25 @@ router.post('/trackitem', middleware , async (req, res) => {
                     itemUrl: itemData.itemWebUrl,
                     itemId: itemData.itemId,
                     title: itemData.title,
-                    currentPrice: itemData.value,
-                    currencyVal: itemData.currency,
-                    status: 'ACTIVE',
-                    endTime: itemData.itemEndDate ? new Date(itemData.itemEndDate) : undefined,
-                    metadata: 
+                    currentPrice: parseFloat(itemData.price.value),
+                    currencyVal: itemData.price.currency,
+                    status: status,
+                    endTime: endTime,
+                    metadata: {
+                        condition: itemData.condition,
+                        imageUrl: itemData.image?.imageUrl,
+                        additionalImages: itemData.additionalImages?.map((img: { imageUrl: string }) => img.imageUrl) || [],
+                        sellerUsername: itemData.seller.username,
+                        sellerFeedback: itemData.seller.feedbackScore,
+                        sellerFeedbackPercentage: itemData.seller.feedbackPercentage
 
-
-
+                    }
                 }
 
-            });
+
+            }
+
+            );
 
             
 
