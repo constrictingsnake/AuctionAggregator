@@ -34,5 +34,7 @@ model TrackedItem {
   lastChecked DateTime @default(now())
   endTime DateTime?
   status String
+  sellerFeedback String
+  sellerFeedbackPercentage String
   metadata Json?
 }
