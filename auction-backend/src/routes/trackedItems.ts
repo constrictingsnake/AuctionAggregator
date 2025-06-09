@@ -110,15 +110,23 @@ router.post('/refreshItem', middleware, refreshLimiter,  async (req, res) => {
         if (!trackedItem) {
             return res.status(404).json({ message: "Tracked item not found" });
         }
+        let response;
+        if (trackedItem.platform === 'ebay') {
 
-        const token = getValidEbayToken();
-        const response = await axios.get(`https://api.ebay.com/buy/browse/v1/item/${TrackedItemId}`,
-            {
-                headers: {
-                    Authorization: `Bearer ${token}`
+            const token = await getValidEbayToken();
+            response = await axios.get(`https://api.ebay.com/buy/browse/v1/item/${trackedItem.id}`,
+                {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
                 }
-            }
-        );
+            );
+
+        } else {
+            // IMPLEMENT YAHOO API
+            response = {message: "implement yahoo"};
+        }
+
 
         const itemData = response.data;
 
@@ -141,3 +149,61 @@ router.post('/refreshItem', middleware, refreshLimiter,  async (req, res) => {
     }
 
 })
+
+router.get('/trackedItem/:id', middleware, async(req, res) => {
+
+    try {
+
+        const trackedItem = await prisma.trackedItem.findFirst({
+            where: {
+                id: parseInt(req.params.id),
+                userId: req.user!.userId
+            }
+        });
+
+        if(!trackedItem) {
+            res.status(401).json({message: "Item not found"});
+        }
+
+        return res.status(200).json(trackedItem);
+
+    } catch (error) {
+        return res.status(501).json({message: "Error finding item"});
+    }
+
+})
+
+router.get('/trackedItems', middleware, async (req, res) => {
+    try {
+        const page = parseInt(req.query.page as string) || 1;
+        const pageSize = 20;
+
+        const trackedItems = await prisma.trackedItem.findMany({
+            where: {
+                userId: req.user!.userId
+            },
+            orderBy: {
+                lastChecked: 'desc'
+            },
+            skip: (page - 1) * pageSize,
+            take: pageSize
+        });
+
+        const totalCount = await prisma.trackedItem.count({
+            where: {
+                userId: req.user!.userId
+            }
+        });
+
+        return res.status(200).json({
+            page,
+            pageSize,
+            totalCount, 
+            trackedItems
+        });
+
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({ message: "Error finding items" });
+    }
+});
