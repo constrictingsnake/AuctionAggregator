@@ -207,3 +207,32 @@ router.get('/trackedItems', middleware, async (req, res) => {
         return res.status(500).json({ message: "Error finding items" });
     }
 });
+
+router.delete('/trackedItems/:id', middleware, async (req, res) => {
+    try {
+        
+        const trackedItem = await prisma.trackedItem.findFirst({
+            where: {
+                id: parseInt(req.params.id),
+                userId: req.user!.userId
+            }
+        });
+
+        if (!trackedItem) {
+            return res.status(404).json({ message: "Tracked item not found or not owned by user" });
+        }
+
+        
+        await prisma.trackedItem.delete({
+            where: {
+                id: trackedItem.id
+            }
+        });
+
+        return res.status(200).json({ message: "Tracked item deleted successfully" });
+
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({ message: "Error deleting tracked item" });
+    }
+});
