@@ -4,6 +4,7 @@ import Dashboard from "./pages/Dashboard";
 import Account from "./pages/Account";
 import Footer from "./components/Footer";
 import { Box } from "@mui/material";
+
 const App = () => {
   return (
     <Router>

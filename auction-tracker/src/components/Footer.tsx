@@ -13,7 +13,7 @@ const Footer = () => {
             }}>
                 <Container maxWidth="md">
                     <Typography variant="body2" color="textSecondary">
-                        © {new Date().getFullYear()} AuctionTracker. All rights reserved.
+                        © {new Date().getFullYear()} Light. All rights reserved.
                     </Typography>
                 </Container>
             </Box>
