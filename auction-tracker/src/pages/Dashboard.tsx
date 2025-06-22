@@ -1,20 +1,25 @@
-import { Box, ThemeProvider } from "@mui/material";
-import theme from "../Theme";
-
+import { Box } from "@mui/material";
+import {Typography} from "@mui/material";
+import Filter from "../components/Filter";
 const Dashboard = () => {
 
     return(
-        <ThemeProvider theme={theme}>
+            <>
             <Box component="header" sx={{
                 bgcolor: 'background.paper',
-                minHeight: '30vh',
+                minHeight: '8rem',
                 
                 }}
             >
-            <h1>This is the header for dashboard</h1>
+            <Typography variant="h1" sx={{
+                fontSize: '8rem',
+                color:'white'
+            }}>Dashboard</Typography>
+            
             </Box>
-        </ThemeProvider>
+            <Filter />
         
+        </>
     );
 
 }
