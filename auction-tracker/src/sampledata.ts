@@ -15,7 +15,7 @@ let sampleEbayItems = [
     "sellerFeedbackPercentage": "97.8",
     "metadata": {
       "condition": "Used - Excellent",
-      "imageUrl": "https://i.ebayimg.com/images/g/iphone_main.jpg",
+      "imageUrl": "https://i.ebayimg.com/images/g/XrwAAOSwYfRnwhrP/s-l1600.webp",
       "additionalImages": [
         "https://i.ebayimg.com/images/g/iphone_side.jpg",
         "https://i.ebayimg.com/images/g/iphone_back.jpg"
@@ -39,7 +39,7 @@ let sampleEbayItems = [
     "sellerFeedbackPercentage": "100.0",
     "metadata": {
       "condition": "New",
-      "imageUrl": "https://i.ebayimg.com/images/g/lego_main.jpg",
+      "imageUrl": "https://i.ebayimg.com/images/g/M-QAAeSwPxJobgQi/s-l1600.webp",
       "additionalImages": [],
       "sellerUsername": "brickmaster"
     }
@@ -60,7 +60,7 @@ let sampleEbayItems = [
     "sellerFeedbackPercentage": "99.3",
     "metadata": {
       "condition": "Open Box",
-      "imageUrl": "https://i.ebayimg.com/images/g/sony_main.jpg",
+      "imageUrl": "https://i.ebayimg.com/images/g/lRYAAeSw4jxobsRs/s-l1600.webp",
       "additionalImages": [
         "https://i.ebayimg.com/images/g/sony_accessories.jpg"
       ],
@@ -83,7 +83,7 @@ let sampleEbayItems = [
     "sellerFeedbackPercentage": "96.1",
     "metadata": {
       "condition": "Brand New",
-      "imageUrl": "https://i.ebayimg.com/images/g/switch_main.jpg",
+      "imageUrl": "https://i.ebayimg.com/thumbs/images/g/Xv8AAeSwZbJocVVd/s-l500.jpg",
       "additionalImages": [
         "https://i.ebayimg.com/images/g/switch_box.jpg"
       ],
@@ -106,12 +106,56 @@ let sampleEbayItems = [
     "sellerFeedbackPercentage": "95.4",
     "metadata": {
       "condition": "Refurbished",
-      "imageUrl": "https://i.ebayimg.com/images/g/xps_main.jpg",
+      "imageUrl": "https://i.ebayimg.com/images/g/a~sAAeSw5aVobiMs/s-l1600.webp",
       "additionalImages": [
         "https://i.ebayimg.com/images/g/xps_ports.jpg",
         "https://i.ebayimg.com/images/g/xps_keyboard.jpg"
       ],
       "sellerUsername": "refurbtechusa"
     }
-  }
+  },
+  {
+    "id": 6,
+    "userId": 101,
+    "platform": "ebay",
+    "itemUrl": "https://www.ebay.com/itm/2345678901",
+    "itemId": "2345678901",
+    "title": "LEGO Star Wars Millennium Falcon Set",
+    "currentPrice": 145.0,
+    "currencyVal": "USD",
+    "lastChecked": "2025-06-21T14:35:00.000Z",
+    "endTime": "2025-06-25T02:45:00.000Z",
+    "status": "active",
+    "sellerFeedback": "3892",
+    "sellerFeedbackPercentage": "100.0",
+    "metadata": {
+      "condition": "New",
+      "imageUrl": "https://i.ebayimg.com/images/g/M-QAAeSwPxJobgQi/s-l1600.webp",
+      "additionalImages": [],
+      "sellerUsername": "brickmaster"
+    }
+  },
+  {
+    "id": 7,
+    "userId": 101,
+    "platform": "ebay",
+    "itemUrl": "https://www.ebay.com/itm/2345678901",
+    "itemId": "2345678901",
+    "title": "LEGO Star Wars Millennium Falcon Set",
+    "currentPrice": 145.0,
+    "currencyVal": "USD",
+    "lastChecked": "2025-06-21T14:35:00.000Z",
+    "endTime": "2025-06-25T02:45:00.000Z",
+    "status": "active",
+    "sellerFeedback": "3892",
+    "sellerFeedbackPercentage": "100.0",
+    "metadata": {
+      "condition": "New",
+      "imageUrl": "https://i.ebayimg.com/images/g/M-QAAeSwPxJobgQi/s-l1600.webp",
+      "additionalImages": [],
+      "sellerUsername": "brickmaster"
+    }
+  },
 ]
+
+export default sampleEbayItems

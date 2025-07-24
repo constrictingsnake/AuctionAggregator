@@ -3,10 +3,10 @@ import { Link as RouterLink } from "react-router-dom"
 
 const Navbar = () => {
     return (
-        <AppBar position="static">
+        <AppBar position="static" sx={{ backgroundColor: "#000000" }}>
             <Toolbar>
                 <Typography variant="h6" sx={{ flexGrow: 1 }}>
-                    Light
+                    DVL - An Auction Tracker
                 </Typography>
                 <Box>
                     <Button color="inherit" component={RouterLink} to="">Dashboard</Button>

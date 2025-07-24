@@ -36,5 +36,6 @@ model TrackedItem {
   status String
   sellerFeedback String
   sellerFeedbackPercentage String
+  sellerName String
   metadata Json?
 }

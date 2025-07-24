@@ -68,11 +68,12 @@ router.post('/trackitem', middleware , async (req, res) => {
                     endTime: endTime,
                     sellerFeedback: itemData.seller.feedbackScore,
                     sellerFeedbackPercentage: itemData.seller.feedbackPercentage,
+                    sellerName: itemData.seller.username,
                     metadata: {
                         condition: itemData.condition,
                         imageUrl: itemData.image?.imageUrl,
                         additionalImages: itemData.additionalImages?.map((img: { imageUrl: string }) => img.imageUrl) || [],
-                        sellerUsername: itemData.seller.username,
+                        
                         
                         
 

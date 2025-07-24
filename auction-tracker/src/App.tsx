@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Dashboard from "./pages/Dashboard";
 import Account from "./pages/Account";
 import Footer from "./components/Footer";
+import ItemCard from "./components/ItemCard";
 import { Box } from "@mui/material";
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/account" element={<Account />} />
+          <Route path="/item" element={<ItemCard />} />
         </Routes>
       </Box>
       <Footer />
