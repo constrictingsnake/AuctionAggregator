@@ -3,8 +3,8 @@ let sampleEbayItems = [
     "id": 1,
     "userId": 101,
     "platform": "ebay",
-    "itemUrl": "https://www.ebay.com/itm/1234567890",
-    "itemId": "1234567890",
+    "itemUrl": "https://www.ebay.com/itm/127187183135",
+    "itemId": "127187183135",
     "title": "Apple iPhone 13 Pro - 128GB - Graphite",
     "currentPrice": 799.99,
     "currencyVal": "USD",
@@ -17,10 +17,12 @@ let sampleEbayItems = [
       "condition": "Used - Excellent",
       "imageUrl": "https://i.ebayimg.com/images/g/XrwAAOSwYfRnwhrP/s-l1600.webp",
       "additionalImages": [
-        "https://i.ebayimg.com/images/g/iphone_side.jpg",
-        "https://i.ebayimg.com/images/g/iphone_back.jpg"
+        "https://d3d71ba2asa5oz.cloudfront.net/12003181/images/6443450cv11d.jpg",
+        "https://d3d71ba2asa5oz.cloudfront.net/12003181/images/6443450cv12d.jpg",
+        "https://d3d71ba2asa5oz.cloudfront.net/12003181/images/418r7s-mnvl.jpg"
       ],
-      "sellerUsername": "techgear_store"
+      "sellerUsername": "techgear_store",
+      "bid_count": 32
     }
   },
   {
@@ -41,7 +43,8 @@ let sampleEbayItems = [
       "condition": "New",
       "imageUrl": "https://i.ebayimg.com/images/g/M-QAAeSwPxJobgQi/s-l1600.webp",
       "additionalImages": [],
-      "sellerUsername": "brickmaster"
+      "sellerUsername": "brickmaster",
+      "bid_count": 32
     }
   },
   {
@@ -54,7 +57,7 @@ let sampleEbayItems = [
     "currentPrice": 289.99,
     "currencyVal": "USD",
     "lastChecked": "2025-06-21T14:37:00.000Z",
-    "endTime": "2025-06-24T22:15:00.000Z",
+    "endTime": "2025-08-24T22:15:00.000Z",
     "status": "active",
     "sellerFeedback": "7523",
     "sellerFeedbackPercentage": "99.3",
@@ -64,7 +67,8 @@ let sampleEbayItems = [
       "additionalImages": [
         "https://i.ebayimg.com/images/g/sony_accessories.jpg"
       ],
-      "sellerUsername": "soundcentral"
+      "sellerUsername": "soundcentral",
+      "bid_count": 32
     }
   },
   {
@@ -87,7 +91,8 @@ let sampleEbayItems = [
       "additionalImages": [
         "https://i.ebayimg.com/images/g/switch_box.jpg"
       ],
-      "sellerUsername": "nintendodeals"
+      "sellerUsername": "nintendodeals",
+      "bid_count": 32
     }
   },
   {
@@ -111,7 +116,8 @@ let sampleEbayItems = [
         "https://i.ebayimg.com/images/g/xps_ports.jpg",
         "https://i.ebayimg.com/images/g/xps_keyboard.jpg"
       ],
-      "sellerUsername": "refurbtechusa"
+      "sellerUsername": "refurbtechusa",
+      "bid_count": 32
     }
   },
   {
@@ -132,7 +138,8 @@ let sampleEbayItems = [
       "condition": "New",
       "imageUrl": "https://i.ebayimg.com/images/g/M-QAAeSwPxJobgQi/s-l1600.webp",
       "additionalImages": [],
-      "sellerUsername": "brickmaster"
+      "sellerUsername": "brickmaster",
+      "bid_count": 32
     }
   },
   {
@@ -153,7 +160,8 @@ let sampleEbayItems = [
       "condition": "New",
       "imageUrl": "https://i.ebayimg.com/images/g/M-QAAeSwPxJobgQi/s-l1600.webp",
       "additionalImages": [],
-      "sellerUsername": "brickmaster"
+      "sellerUsername": "brickmaster",
+      "bid_count": 32
     }
   },
 ]
